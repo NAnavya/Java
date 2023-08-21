@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean name="address" class="org.virtusa.Address">
+		<constructor-arg name="dno" value="101" index="0"/>
+		<constructor-arg name="streetName" value="Gandhi Street" index="1"/>
+		<constructor-arg name="loc" value="Chennai" index="2"/>
+	</bean>
+	<bean name="company" class="org.virtusa.Company">
+		<constructor-arg name="cid" value="901" index="0"/>
+		<constructor-arg name="companyName" value="Virtusa" index="1"/>
+		<constructor-arg name="companyLoc" value="Chennai" index="2"/>
+	</bean>
+	<bean name="emp" class="org.virtusa.Emp">
+		<property name="eno" value="1"/>
+		<property name="name" value="Suresh"/>
+		<property name="address" ref="address"/>
+		<property name="company" ref="company"/>
+	</bean>
+</beans>

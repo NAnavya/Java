@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name = "org.virtusa.app.Emp" table = "EMP">
+      <id name = "eno" type = "int" column = "eno">
+         <generator class="identity"/>
+      </id>
+      <property name = "name" column = "NAME" type = "string"/>
+      <property name = "address" column = "ADDRESS" type = "string"/>
+      <property name = "dateOfJoin" column = "DATEOFJOIN"/>
+   </class>
+</hibernate-mapping>

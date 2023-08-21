@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<bean name="c1" class="org.virtusa.Course">
+			<property name="cid" value="1"/>
+			<property name="courseName" value="java"/>
+			<property name="price" value="100"/>
+		</bean>
+		<bean name="c2" class="org.virtusa.Course">
+			<property name="cid" value="2"/>
+			<property name="courseName" value=".net"/>
+			<property name="price" value="150"/>
+		</bean>
+		<bean name="c3" class="org.virtusa.Course">
+			<property name="cid" value="3"/>
+			<property name="courseName" value="Python"/>
+			<property name="price" value="50"/>
+		</bean>
+		<bean name="academy" class="org.virtusa.Academy">
+			<property name="id" value="1"/>
+			<property name="name" value="Virtusa"/>
+			<property name="courses">
+				<list>
+					<ref bean="c1"/>
+					<ref bean="c2"/>
+					<ref bean="c3"/>
+				</list>
+			</property>
+		</bean>
+</beans>

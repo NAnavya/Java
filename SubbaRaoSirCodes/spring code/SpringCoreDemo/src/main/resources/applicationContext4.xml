@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!-- <bean name="quiz" class="org.virtusa.Quiz">
+			<property name="question" value="What is Java?"/>
+			<property name="answers">
+				<map>
+					<entry key="Java is an OOP Language" value="Ksrao"/>
+					<entry key="Java is a technology" value="ramesh"/>
+					<entry key="Java is an island" value="vamsi"/>
+				</map>
+			</property>
+		</bean> -->
+		<bean name="user1" class="org.virtusa.User">
+			<property name="id" value="1"/>
+			<property name="name" value="suresh"/>
+			<property name="designation" value="Associate"/>
+		</bean>
+		<bean name="user2" class="org.virtusa.User">
+			<property name="id" value="2"/>
+			<property name="name" value="ramesh"/>
+			<property name="designation" value="Consultant"/>
+		</bean>
+		<bean name="quiz" class="org.virtusa.Quiz">
+			<property name="question" value="What is Java?"/>
+			<property name="answers">
+				<map>
+					<entry key="Java is a oop Language" value-ref="user1"/>
+					<entry key="Java is a island" value-ref="user2"/>
+				</map>
+			</property>
+		</bean>
+</beans>
